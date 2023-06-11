@@ -1,0 +1,48 @@
+최신 리뷰, 동일한 전년도의 월 리뷰를 순위없이 표시
+사용자가 입력한 검색어(keyword)에 따라 최신 리뷰, 동일한 전년도의 월 리뷰를 노출합니다.
+
+결과 값 :
+  {
+    last_year : [{ author: 작성자명(string), rating: 별점(string), reviewText: 리뷰 본문(string), title: 게시글 제목(string)}, ...]
+    recent_year : [{ author: 작성자명(string), rating: 별점(string), reviewText: 리뷰 본문(string), title: 게시글 제목(string)}, ...]
+  }
+---
+tags:
+  - review
+parameters:
+  - name: keyword
+    in: formData
+    description: 검색어 입력 (ex. 직지사)
+    required: false
+    type: string
+responses:
+  200:
+    schema:
+      type: object
+      properties:
+        last_year:
+          type: array
+          items:
+            type: object
+            properties:
+              author:
+                type: string
+              rating:
+                type: string
+              reviewText:
+                type: string
+              title:
+                type: string
+        recent:
+          type: array
+          items:
+            type: object
+            properties:
+              author:
+                type: string
+              rating:
+                type: string
+              reviewText:
+                type: string
+              title:
+                type: string

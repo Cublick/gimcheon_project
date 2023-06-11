@@ -1,0 +1,32 @@
+가장 Hot한 관광지 1곳을 빅데이터를 통해 표출합니다.
+AI Level과, 가장 Hot한 관광지 1곳, 명사, 동사를 각 나타내어 문장을 이룰 수 있도록 반환합니다.
+리뷰, 리뷰 평점을 나타내어 실제 사람들이 작성한 리뷰도 함께 반환합니다.
+
+
+결과 값 : {
+  AI Level: 나이(integer),
+  Keyword: 관광지 명(string),
+  NNG: 명사(string),
+  VA: 동사(string),
+  reviews: [ 리뷰(string), ... ],
+  ratings: [ 평점(string), ...]
+}
+---
+tags:
+  - graph
+responses:
+  200:
+    schema:
+      type: object
+      properties:
+        result:
+          type: object
+          items: {}
+          examples: {
+            AI Level: 4,
+            Keyword: 연화지,
+            NNG: 벚꽃,
+            VA: 아름답,
+            reviews: [ "아담하고 풍경이 아름답습니다.", ...],
+            ratings: [ "5점", ...]
+          }

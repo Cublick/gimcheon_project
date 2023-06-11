@@ -1,0 +1,25 @@
+기상청의 현재 날씨에 어울리는 숙박, 음식점(메뉴), 관광지를 추천
+기상청의 api를 이용하여 현재 날씨, 기온 상태를 바탕으로 빅데이터를 이용하여 가장 높은 점수를 나타낸 숙박, 음식점(메뉴), 관광지를 추천합니다.
+
+결과 값 : {
+  accommodation: [숙박명(string), ... ]
+  restaurant: [{ 음식점명(string): [ {메뉴이름(string): 메뉴종류(string)}]}, ...]
+  tourspot: [관광지명, ...]
+}
+---
+tags:
+  - weather
+responses:
+  200:
+    schema:
+      type: object
+      properties:
+        accommodation:
+          type: array
+          items: []
+        restaurants:
+          type: array
+          items: []
+        touristspot:
+          type: array
+          items: []

@@ -1,0 +1,31 @@
+급상승 검색어 - 일 별 검색수가 높은 키워드 순위대로 표시
+현재 저장된 검색어가 없거나 부족하여 1주일간 빅데이터분석을 통해 가장 Hot한 곳 10곳을 반환합니다.
+
+** 현재 사용자가 검색을 하는 시스템이 아니기에 3개월이후 저장된 검색어로 바꿀 예정입니다. **
+
+ex) 순위변동: 3 -- 3만큼 증가 / 순위변동: -3 -- 3만큼 감소 / 순위변동: "-" -- 변동없음 / 순위변동: "new" -- 새로 추가됨
+
+결과 값 : [{
+  {
+    rank: 순위(integer),
+    updown: 순위변동(integer/string),
+    value: 장소(string)
+  }, ...
+}]
+---
+tags:
+  - rank
+
+responses:
+  200:
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          rank:
+            type: integer
+          updown:
+            type: string
+          value:
+            type: string

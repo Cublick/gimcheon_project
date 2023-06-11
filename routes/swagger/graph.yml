@@ -1,0 +1,19 @@
+최근 한 달간 가장 Hot한 관광지 10곳을 나타냅니다.
+한 달간 인스타, 네이버 블로그, SNS 등 다양한 곳에서 가장 언급이 많이 되고 인기 있는 관광지 10곳을 반환합니다.
+
+결과 값 : {
+  관광지 명(string): 카운트(integer),
+  ...
+}
+---
+tags:
+  - graph
+responses:
+  200:
+    schema:
+      type: object
+      properties:
+        result:
+          type: object
+          items: {}
+          examples: {'금오산': 16}

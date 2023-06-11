@@ -1,0 +1,29 @@
+가족여행으로 인기있는 장소를 순위대로 표시
+지난 달과 이번달을 비교하여 한 달간 가족여행과 관련된 키워드를 추출하여 가장 높은 빈도수를 나타낸 장소, 순위, 순위변동을 반환합니다.
+
+ex) 순위변동: 3 -- 3만큼 증가 / 순위변동: -3 -- 3만큼 감소 / 순위변동: "-" -- 변동없음 / 순위변동: "new" -- 새로 추가됨
+
+결과 값 : [{
+  {
+    rank: 순위(integer),
+    updown: 순위변동(integer/string),
+    result: 장소(string)
+  }, ...
+}]
+---
+tags:
+  - rank
+
+responses:
+  200:
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          rank:
+            type: integer
+          updown:
+            type: string
+          value:
+            type: string

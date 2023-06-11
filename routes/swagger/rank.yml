@@ -1,0 +1,21 @@
+최근 한달간 가장 Hot한 이슈 10곳을 나타냅니다.
+최근 한달간 가장 Hot한 이슈 10곳을 나타냅니다.1
+최근 한달간 가장 Hot한 이슈 10곳을 나타냅니다.2
+최근 한달간 가장 Hot한 이슈 10곳을 나타냅니다.3
+---
+tags:
+  - rank
+
+responses:
+  200:
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          rank:
+            type: integer
+          updown:
+            type: string
+          value:
+            type: string

@@ -1,0 +1,41 @@
+이용객이 자주 사용하는 검색어(키워드) 자동 완성
+사용자가 입력값(keyword)을 입력하면 입력값(keyword)와 가장 연관성이 높은 관광지(touristspot), 음식점(restaurants), 숙박(accommodation), 댓글(posting) 자동완성을 반환합니다.
+
+** 사용자의 입력값이 없을시 자주 사용하는 키워드 표출 추가예정입니다. **
+
+결과 값 : {
+  accommodation : [ 숙박지 명(string), 숙박지 명(string), ... ],
+  posting : [ 포스팅 글(string), 포스팅 글(string), ...  ],
+  restaurants : [ 음식점 명(string), 음식점 명(string), ... ],
+  touristspot : [ 관광지 명(string), 관광지 명(string), ...]
+}
+---
+tags:
+  - Autocomplete
+parameters:
+  - name: keyword
+    in: formData
+    description: 검색어 입력 (ex. 직지사)
+    required: false
+    type: string
+responses:
+  200:
+    schema:
+      type: object
+      properties:
+        accommodation:
+          type: array
+          items: []
+          examples: ["사명호텔", ...]
+        posting:
+          type: array
+          items: []
+          examples: ["정말 좋아요..."]
+        restaurants:
+          type: array
+          items: []
+          examples: ["사명음식집..."]
+        touristspot:
+          type: array
+          items: []
+          examples: ["사명대사공원..."]
