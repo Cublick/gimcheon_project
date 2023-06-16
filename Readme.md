@@ -14,7 +14,3 @@
    pycharm / vscode 등을 사용하여 app.py실행
 ~~~
 
-# Linux Server 경로
-~~~
-   cd /home/user/mongoDB_Elasticsearch/mongoDB_Elasticsearch
-~~~
