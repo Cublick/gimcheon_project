@@ -6,5 +6,5 @@
    pip install pytz<br/>
    pip install flask-cors<br/>
    
-2. python / python3 app.py
+2. python / python3 app.py<br/>
    pycharm / vscode 등을 사용하여 app.py실행
